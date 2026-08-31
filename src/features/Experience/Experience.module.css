@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-12);
+}
+
+@media print {
+  .container {
+    row-gap: var(--space-10);
+  }
+}

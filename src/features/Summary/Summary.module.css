@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-8);
+}
+
+.text {
+  margin: 0;
+  line-height: var(--line-height-normal);
+  text-wrap: pretty;
+  font-size: var(--font-size-base);
+}
+
+@media print {
+  .container {
+    row-gap: var(--space-4);
+  }
+
+  .text {
+    font-size: var(--print-font-size-sm);
+    line-height: var(--line-height-snug);
+  }
+}

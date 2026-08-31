@@ -1,0 +1,27 @@
+.container {
+  flex-grow: 1;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-section-title);
+  background: var(--color-section-title-bg);
+  padding: var(--space-6) var(--space-10);
+  margin-inline: calc(var(--space-10) * -1);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-10);
+}
+
+@media print {
+  .title {
+    font-size: var(--print-font-size-base);
+    padding: var(--space-4) var(--space-8);
+    margin-inline: calc(var(--space-8) * -1);
+    margin-bottom: var(--space-8);
+    break-after: avoid;
+  }
+}

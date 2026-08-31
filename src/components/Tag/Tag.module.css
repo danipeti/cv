@@ -1,0 +1,21 @@
+.tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border: 1px solid var(--color-tag-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  padding: var(--space-4) var(--space-6);
+  line-height: var(--line-height-tight);
+  text-box: trim-both cap alphabetic;
+  white-space: nowrap;
+}
+
+@media print {
+  .tag {
+    font-size: var(--print-font-size-xs);
+    padding: 0.15rem var(--space-6);
+    line-height: 1.15;
+    text-box: normal;
+  }
+}

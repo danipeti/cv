@@ -1,0 +1,65 @@
+.button {
+  position: fixed;
+  top: var(--space-16);
+  right: var(--space-16);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  background: var(--color-paper-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-tag-border);
+  box-shadow: var(--color-paper-shadow) 0 2px 8px 0;
+  padding: var(--space-8);
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+
+  &:hover {
+    border-color: var(--color-link-hover);
+    color: var(--color-link-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--color-paper-shadow) 0 4px 12px 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-link-hover);
+    outline-offset: 2px;
+  }
+}
+
+.icon {
+  width: var(--space-16);
+  height: var(--space-16);
+  flex-shrink: 0;
+}
+
+.text {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .button {
+    padding: var(--space-8) var(--space-12);
+    border-radius: var(--radius-md);
+  }
+
+  .text {
+    display: inline;
+  }
+}
+
+@media print {
+  .button {
+    display: none;
+  }
+}

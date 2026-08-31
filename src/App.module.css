@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-16);
+
+  @media print {
+    row-gap: var(--space-12);
+  }
+}

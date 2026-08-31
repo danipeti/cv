@@ -1,0 +1,22 @@
+.container {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-16);
+  min-width: 20rem;
+  max-width: 60rem;
+  background: var(--color-paper-bg);
+  box-shadow: var(--color-paper-shadow) 0 2px 8px 0;
+  margin-inline: auto;
+  padding: clamp(var(--space-20), calc(var(--space-16) + 1vw), var(--space-32))
+    clamp(var(--space-16), calc(var(--space-8) + 3vw), var(--space-40));
+  border-radius: var(--radius-sm);
+
+  @media print {
+    row-gap: var(--space-12);
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    max-width: unset;
+  }
+}
